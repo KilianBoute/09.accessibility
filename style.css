@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, #000000 80%, rgb(9, 9, 121) 90%, rgb(0, 212, 255) 100%);
+  color: white;
+}
+body header nav {
+  text-align: center;
+  padding: 1rem;
+  background-color: #000000;
+}
+body main::before {
+  content: "";
+  position: fixed;
+  background-image: url("images/rocket.png");
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+body main article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body main article section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+body main article section img {
+  width: 100%;
+}
+body main article section .planet-info {
+  background-color: black;
+  border-radius: 10px;
+  border: 2px dotted red;
+  padding: 1rem;
+}
+body main article section .planet-info h2 {
+  margin-bottom: 1rem;
+}
+body footer {
+  text-align: center;
+  margin-top: 100vh;
+}
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  border-left: 4px dotted #8f8e8e;
+  min-height: auto;
+  display: inline-block;
+  margin-bottom: 3rem;
+}/*# sourceMappingURL=style.css.map */
