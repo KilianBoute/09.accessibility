@@ -14,14 +14,27 @@ body header nav {
   padding: 1rem;
   background-color: #000000;
 }
-body main::before {
-  content: "";
+body main #myBtn {
+  display: none;
   position: fixed;
-  background-image: url("images/rocket.png");
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  z-index: 0;
+  bottom: 10%;
+  right: 10%;
+  width: 3rem;
+  height: 3rem;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-image: url("images/moon.png");
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+body main #myBtn:hover {
+  background-color: #555;
 }
 body main article {
   display: flex;
@@ -51,7 +64,7 @@ body footer {
   text-align: center;
   margin-top: 100vh;
 }
-body::after {
+body::before {
   content: "";
   position: fixed;
   z-index: -1;
@@ -63,4 +76,16 @@ body::after {
   min-height: auto;
   display: inline-block;
   margin-bottom: 3rem;
+}
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 20%;
+  bottom: 0;
+  background-image: url("images/rocket.png");
+  background-size: 100%;
+  width: 20%;
+  left: 40%;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */

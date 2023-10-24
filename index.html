@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bd0e2c5b6f.js" crossorigin="anonymous"></script>
+
     <title>Index</title>   
     <!-- <link rel="stylesheet" type="text/css" href="background.css" />  -->
     <link rel="stylesheet" type="text/css" href="style.css" /> 
@@ -11,7 +13,8 @@
 <body>
     <header>
         <nav>
-            <h2>Journey through the solar system</h2>
+            <h2>JOURNEY TO THE SUN</h2>
+            <a href="#jupiter">Jupiter.</a>
 
             <!-- <h3>Titel</h3>
             <ul>
@@ -27,9 +30,9 @@
             </ul> -->
         </nav>
     </header>
-    <main class="stars">
+    <main id="stars">
         <article>
-            
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-regular fa-circle-up"></i></button>
             <section>
                 <img src="images/neptune.png">
                 <div class="planet-info">
@@ -57,6 +60,7 @@
                     </p>               
                 </div>
             </section>
+            <a id="jupiter"></a>
             <section>
                 <img src="images/jupiter.png">
                 <div class="planet-info">
@@ -73,4 +77,27 @@
     </footer>
     
 </body>
+
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
 </html>
