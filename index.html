@@ -13,9 +13,18 @@
 <body>
     <header>
         <nav>
-            <h2>JOURNEY TO THE SUN</h2>
-            <a href="#jupiter">Jupiter.</a>
+            <a href="index.html"  id="logo"><img src="images/SPACELOGO.png" id="img-logo"></a>
 
+            <ul id="links">
+                <li><a href="#neptune" class="navLink">Neptune</a></li>
+                <li><a href="#uranus" class="navLink">Uranus</a></li>
+                <li><a href="#saturn" class="navLink">Saturn</a></li>
+                <li><a href="#jupiter" class="navLink">Jupiter</a></li>
+                <li><a href="#mars" class="navLink">Mars</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="mobileDropdown()">
+                <i class="fa fa-bars"></i>
+            </a>
             <!-- <h3>Titel</h3>
             <ul>
                 <li>
@@ -32,8 +41,14 @@
     </header>
     <main>
         <article id="space">
+
+            <div id="asteroid-belt">
+                <h3>Journey back to earth</h3>
+            </div>
+
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-regular fa-circle-up"></i></button>
-            <section class="stars">
+            <a id="neptune"></a>
+            <section>
                 <img src="images/neptune.png">
                 <div class="planet-info">
                     <h2>Neptune</h2>
@@ -42,7 +57,8 @@
                     </p>
                 </div>
             </section>
-            <section class="stars">
+            <a id="uranus"></a>
+            <section>
                 <img src="images/uranus.png">
                 <div class="planet-info">
                     <h2>Uranus</h2>
@@ -51,7 +67,8 @@
                     </p>
                 </div>
             </section>
-            <section class="stars">
+            <a id="saturn"></a>
+            <section>
                 <img src="images/saturn.png">
                 <div class="planet-info">
                     <h2>Saturn</h2>
@@ -61,12 +78,32 @@
                 </div>
             </section >
             <a id="jupiter"></a>
-            <section class="stars">
+            <section>
                 <img src="images/jupiter.png">
                 <div class="planet-info">
                     <h2>Jupiter</h2>
                     <p>
-                        Jupiter, the largest planet in our solar system, is a gas giant characterized by its prominent bands of clouds and the Great Red Spot, a massive storm. It has at least 79 known moons, including Ganymede, the largest moon in the solar system. Jupiter's immense size and strong magnetic field make it a key player in our solar system's dynamics, and it's a popular target for both amateur and professional astronomers.
+                        Jupiter, the largest planet in our solar system, is a gas giant characterized by its prominent bands of clouds and the Great Red Spot, a massive storm. It has at least 79 known moons, including Ganymede, the largest moon in the solar system. Jupiter's immense size and strong magnetic field make it a key player in our solar system's dynamics. 
+                    </p>               
+                </div>
+            </section>
+            <a id="mars"></a>
+            <section>
+                <img src="images/mars.png">
+                <div class="planet-info">
+                    <h2>Mars</h2>
+                    <p>
+                        Mars, often called the "Red Planet" due to its reddish appearance, is the fourth planet from the Sun in our solar system. It's a terrestrial planet with a thin atmosphere, and its surface features include canyons, volcanoes, and dry river valleys, suggesting a dynamic geological history. 
+                    </p>               
+                </div>
+            </section>
+            <a id="earth"></a>
+            <section>
+                <img src="images/earth.png">
+                <div class="planet-info">
+                    <h2>Earth</h2>
+                    <p>
+                        Earth is the third planet from the Sun in our solar system and the only known celestial body to support life. It's often referred to as the "Blue Planet" because of its vast oceans. Earth has a diverse and complex ecosystem, with a wide range of climates and environments. Home.
                     </p>               
                 </div>
             </section>
@@ -79,25 +116,32 @@
 </body>
 
 <script>
-    // Get the button
+   
     let mybutton = document.getElementById("myBtn");
     
-    // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
     
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
         mybutton.style.display = "block";
       } else {
         mybutton.style.display = "none";
       }
     }
     
-    // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+
+    function mobileDropdown() {
+    var x = document.getElementById("links");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
     </script>
 
 </html>

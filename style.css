@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "oxanium";
+  src: url("fonts/Oxanium/Oxanium-VariableFont_wght.ttf");
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +12,63 @@ body {
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, #000000 80%, rgb(9, 9, 121) 90%, rgb(0, 212, 255) 100%);
   color: white;
+  font-family: "oxanium";
 }
 body header nav {
-  text-align: center;
   padding: 1rem;
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 10px -1px rgb(210, 210, 169), 0 4px 20px -2px rgb(154, 77, 77);
+}
+body header nav #img-logo {
+  max-width: 15%;
+}
+body header nav #links {
+  display: none;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+body header nav .navLink {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: white;
+}
+body header nav .navLink:hover {
+  text-shadow: 0px -2px 4px #740000, 0px -2px 10px rgb(193, 90, 86), 0px -6px 15px rgb(188, 53, 48), 0px -10px 20px rgb(238, 255, 0), 0px -20px 40px rgb(255, 0, 0);
+}
+body header nav .icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10%;
+  color: white;
+}
+body main {
+  padding-top: 30px;
+}
+body main #asteroid-belt {
+  height: 200px;
+  padding-top: 30%;
+  background-image: url("images/asteroids.png");
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+}
+body main #space {
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body main #space {
+  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 100px 100px;
 }
 body main #myBtn {
   display: none;
@@ -25,7 +81,7 @@ body main #myBtn {
   font-size: 24px;
   border: none;
   outline: none;
-  background-image: url("images/moon.png");
+  background-image: url("images/pluto.png");
   background-position: center;
   background-size: 200%;
   background-repeat: no-repeat;
@@ -52,9 +108,9 @@ body main article section img {
   width: 100%;
 }
 body main article section .planet-info {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
-  border: 2px dotted red;
+  border: 2px solid #8661C1;
   padding: 1rem;
 }
 body main article section .planet-info h2 {
@@ -62,7 +118,7 @@ body main article section .planet-info h2 {
 }
 body footer {
   text-align: center;
-  margin-top: 100vh;
+  background-color: #02C3F3;
 }
 body::before {
   content: "";
@@ -75,7 +131,6 @@ body::before {
   border-left: 4px dotted #8f8e8e;
   min-height: auto;
   display: inline-block;
-  margin-bottom: 3rem;
 }
 body::after {
   content: "";
@@ -89,25 +144,3 @@ body::after {
   left: 40%;
   background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
-
-#space{
-  overflow: hidden;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-#space {
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
-    
-  background-repeat: repeat;
-  background-size: 100px 100px;
-  
-}
