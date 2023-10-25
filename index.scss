@@ -1,0 +1,182 @@
+$color-info: rgb(0, 0, 0);
+$color-info-border: #8661C1;
+$gradient-bg: linear-gradient(180deg, #000000 80%, rgba(9, 9, 121, 1) 90%, rgba(0, 212, 255, 1) 100%);
+
+body{
+    background: $gradient-bg;
+
+main {
+
+ 
+    padding-top: 30px;
+
+    #asteroid-belt {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+
+        background-image: url('images/asteroids.png');
+
+        background-size: 170%;
+        background-position: 50%;
+        background-repeat: repeat-x;
+
+        h1 {
+
+            max-width: 60%;
+
+            background-color: $color-info;
+            border-radius: 10px;
+            border: 2px solid $color-info-border;
+            padding: 1rem;
+
+            padding: 1rem;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+    }
+
+    #space {
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background-image:
+            radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+            radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+            radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+            radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+
+        background-repeat: repeat;
+        background-size: 100px 100px;
+
+
+    }
+
+    #myBtn {
+
+        display: none;
+        position: fixed;
+        bottom: 10%;
+        right: 10%;
+        width: 3rem;
+        height: 3rem;
+        z-index: 99;
+        font-size: 24px;
+        border: none;
+        outline: none;
+        background-image: url('images/pluto.png');
+        background-position: center;
+        background-size: 200%;
+        background-repeat: no-repeat;
+        color: white;
+        cursor: pointer;
+
+        border-radius: 50%;
+
+    }
+
+
+    article {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            .planet {
+                width: 100%;
+            }
+
+            .planet-info {
+                background-color: $color-info;
+                border-radius: 10px;
+                border: 2px solid $color-info-border;
+                padding: 1rem;
+
+                h2 {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+    //dotted line
+    &::before {
+        content: "";
+        position: fixed;
+        z-index: -3;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        border-left: 4px dotted #8f8e8e;
+        min-height: auto;
+        display: inline-block;
+
+    }
+
+    //rocket
+    &::after {
+        content: "";
+        position: fixed;
+        z-index: -1;
+        top: 35%;
+        bottom: 0;
+        background-image: url('images/rocket.png');
+        background-size: 100%;
+        width: 20%;
+        left: 40%;
+        background-repeat: no-repeat;
+    }
+
+
+    @media screen and (min-width: 800px) {
+        main {
+            #asteroid-belt {
+
+                height: 400px;
+
+                background-image: url('images/asteroids.png');
+
+                background-size: 100%;
+                background-position: 50%;
+                background-repeat: repeat-x;
+
+            }
+
+            article {
+                section {
+
+                    padding: 5%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .planet {
+                        max-width: 40%;
+                    }
+
+                    .planet-info {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+}

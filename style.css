@@ -10,7 +10,6 @@
 
 body {
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, #000000 80%, rgb(9, 9, 121) 90%, rgb(0, 212, 255) 100%);
   color: white;
   font-family: "oxanium";
 }
@@ -27,6 +26,7 @@ body header nav #img-logo {
 body header nav #links {
   display: none;
   list-style-type: none;
+  z-index: 99;
   padding-left: 0;
   margin-left: 0;
   margin-top: 1rem;
@@ -37,7 +37,7 @@ body header nav .navLink {
   color: white;
 }
 body header nav .navLink:hover {
-  text-shadow: 0px -2px 4px #740000, 0px -2px 10px rgb(193, 90, 86), 0px -6px 15px rgb(188, 53, 48), 0px -10px 20px rgb(238, 255, 0), 0px -20px 40px rgb(255, 0, 0);
+  text-shadow: 0px -2px 4px #633ca2, 0px -2px 10px #8661C1, 0px -6px 15px #9271c5, 0px -10px 20px #b098d5, 0px -20px 40px #eae6ef;
 }
 body header nav .icon {
   display: block;
@@ -47,100 +47,42 @@ body header nav .icon {
   padding: 10%;
   color: white;
 }
-body main {
-  padding-top: 30px;
-}
-body main #asteroid-belt {
-  height: 200px;
-  padding-top: 30%;
-  background-image: url("images/asteroids.png");
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-position: 50%;
-}
-body main #space {
-  overflow: hidden;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-body main #space {
-  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
-  background-repeat: repeat;
-  background-size: 100px 100px;
-}
-body main #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 10%;
-  right: 10%;
-  width: 3rem;
-  height: 3rem;
-  z-index: 99;
-  font-size: 24px;
-  border: none;
-  outline: none;
-  background-image: url("images/pluto.png");
-  background-position: center;
-  background-size: 200%;
-  background-repeat: no-repeat;
-  color: white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-body main #myBtn:hover {
-  background-color: #555;
-}
-body main article {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-body main article section {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-body main article section img {
-  width: 100%;
-}
-body main article section .planet-info {
-  background-color: rgb(0, 0, 0);
-  border-radius: 10px;
-  border: 2px solid #8661C1;
-  padding: 1rem;
-}
-body main article section .planet-info h2 {
-  margin-bottom: 1rem;
-}
 body footer {
+  margin-top: 2rem;
+  padding: 1rem;
   text-align: center;
+  color: rgb(0, 0, 0);
   background-color: #02C3F3;
 }
-body::before {
-  content: "";
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  border-left: 4px dotted #8f8e8e;
-  min-height: auto;
-  display: inline-block;
-}
-body::after {
-  content: "";
-  position: fixed;
-  z-index: -1;
-  top: 20%;
-  bottom: 0;
-  background-image: url("images/rocket.png");
-  background-size: 100%;
-  width: 20%;
-  left: 40%;
-  background-repeat: no-repeat;
+@media screen and (min-width: 800px) {
+  body nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 0;
+  }
+  body nav .logo {
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    order: 0;
+    margin-right: auto;
+  }
+  body nav img {
+    margin: 0;
+    width: 10%;
+  }
+  body nav #links {
+    display: flex !important;
+    text-align: right;
+    margin: 1rem;
+    order: 1;
+  }
+  body nav .navLink {
+    margin-left: 1rem;
+  }
+  body nav .icon {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

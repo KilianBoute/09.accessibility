@@ -1,10 +1,11 @@
-$color-bg: rgb(0,0,0);
-$gradient-bg: linear-gradient(180deg, #000000 80%, rgba(9,9,121,1) 90%, rgba(0,212,255,1) 100%);
+$color-bg: rgb(0, 0, 0);
 $color-text: white;
-$color-nav: rgb(0,0,0);
-$color-info: rgb(0,0,0);
-$color-info-border: #8661C1;
-$color-footer: #02C3F3;
+$color-nav: rgb(0, 0, 0);
+
+$color-bg-footer: #02C3F3;
+$color-footer: rgb(0, 0, 0);
+$hoverShadow: 0px -2px 4px #633ca2, 0px -2px 10px #8661C1, 0px -6px 15px #9271c5,
+0px -10px 20px #b098d5, 0px -20px 40px #eae6ef;
 
 @font-face {
     font-family: "oxanium";
@@ -17,44 +18,44 @@ $color-footer: #02C3F3;
     padding: 0;
 }
 
-body{
+body {
+
     background: $color-bg;
-    background: $gradient-bg;
     color: $color-text;
     font-family: "oxanium";
 
-    header{
+    header {
 
-        nav{
+        nav {
             padding: 1rem;
             background-color: $color-nav;
-            
+
             overflow: hidden;
             position: relative;
             box-shadow: 0 2px 10px -1px rgb(210, 210, 169), 0 4px 20px -2px rgb(154, 77, 77);
 
-            #img-logo{
+            #img-logo {
                 max-width: 15%;
             }
 
-            #links{
+            #links {
                 display: none;
                 list-style-type: none;
+                z-index: 99;
                 padding-left: 0;
                 margin-left: 0;
                 margin-top: 1rem;
             }
 
-            .navLink{
+            .navLink {
                 margin-top: 1rem;
-                
+
                 text-decoration: none;
                 color: $color-text;
             }
 
-            .navLink:hover{
-                text-shadow: 0px -2px 4px #740000, 0px -2px 10px rgb(193, 90, 86), 0px -6px 15px rgb(188, 53, 48), 
-                0px -10px 20px rgb(238, 255, 0), 0px -20px 40px rgb(255, 0, 0);
+            .navLink:hover {
+                text-shadow: $hoverShadow;
             }
 
             .icon {
@@ -65,143 +66,63 @@ body{
                 padding: 10%;
                 color: $color-text;
             }
-            
-            
+
         }
 
     }
-    main{
 
-        padding-top: 30px;
 
-        #asteroid-belt{
-            height: 200px;
-            padding-top: 30%;
-            
-                background-image: url('images/asteroids.png');
-                background-repeat: no-repeat;
-                background-size: 200%;
-                background-position: 50%;
-        }
+    footer {
+        margin-top: 2rem;
+        padding: 1rem;
+        text-align: center;
+        color: $color-footer;
+        background-color: $color-bg-footer;
+    }
 
-        #space{
-            overflow: hidden;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-          }
-          
-          #space {
-            background-image: 
-              radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
-              
-            background-repeat: repeat;
-            background-size: 100px 100px;
-            
-            
-          }
 
-        #myBtn {
-            
-            display: none;
-            position: fixed;
-            bottom: 10%;
-            right: 10%;
-            width: 3rem;
-            height: 3rem;
-            z-index: 99;
-            font-size: 24px;
-            border: none;
-            outline: none;
-            background-image: url('images/pluto.png');
-            background-position: center;
-            background-size: 200%;
-            background-repeat: no-repeat;
-            color: white;
-            cursor: pointer;
-  
-            border-radius: 50%;
-          }
-          
-          #myBtn:hover {
-            background-color: #555;
-          }
 
-    
-      
-        article{
+
+    @media screen and (min-width: 800px) {
+
+        nav {
             display: flex;
-            flex-direction: column;
-            text-align: center;
-            section{
-                display: flex;
-                flex-direction: column;
-                padding: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem;
+            margin-bottom: 0;
+
+
+            .logo {
                 align-items: center;
-                margin-bottom: 3rem;
-                
-                img{
-                    width: 100%;
-                    //background: rgb(255,255,255);
-                    //background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
-                }
-                .planet-info{
-                    background-color: $color-info;
-                    border-radius: 10px;
-                    border: 2px solid $color-info-border;
-                    padding: 1rem;
-                    h2{
-                        margin-bottom: 1rem;
-                    }
-                }   
+                height: fit-content;
+                order: 0;
+                margin-right: auto;
+            }
+
+            img {
+                margin: 0;
+                width: 10%;
+            }
+
+            #links {
+                display: flex !important;
+                text-align: right;
+                margin: 1rem;
+                order: 1;
+            }
+
+            .navLink {
+                margin-left: 1rem;
+            }
+
+            .icon {
+                display: none;
             }
         }
-    }
 
-    footer{
-        text-align: center;
-        background-color: $color-footer;
-    }
-  
-    &::before {
-        content:"";
-        position: fixed;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 0;
-        border-left: 4px dotted #8f8e8e;
-        min-height: auto;
-        display: inline-block;
-    
-    }
-
-    &::after{
-        content:"";
-        position: fixed;
-        z-index: -1;
-        top: 20%;
-        bottom: 0;
-        background-image: url('images/rocket.png');
-        background-size: 100%;
-        width: 20%;
-        left: 40%;
-        background-repeat: no-repeat;
     }
 
 
-    
 
-   
-
-
-  
 }
-

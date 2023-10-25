@@ -1,110 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
     <script src="https://kit.fontawesome.com/bd0e2c5b6f.js" crossorigin="anonymous"></script>
-
-    <title>Index</title>   
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
     <!-- <link rel="stylesheet" type="text/css" href="background.css" />  -->
-    <link rel="stylesheet" type="text/css" href="style.css" /> 
- 
+   
+
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="index.html"  id="logo"><img src="images/SPACELOGO.png" id="img-logo"></a>
+            <a href="index.html" id="logo" aria-label="Home"><img src="images/SPACELOGO.png" id="img-logo" alt="Website logo"
+                    aria-label="Image of the website logo"></a>
 
             <ul id="links">
-                <li><a href="#neptune" class="navLink">Neptune</a></li>
-                <li><a href="#uranus" class="navLink">Uranus</a></li>
-                <li><a href="#saturn" class="navLink">Saturn</a></li>
-                <li><a href="#jupiter" class="navLink">Jupiter</a></li>
-                <li><a href="#mars" class="navLink">Mars</a></li>
+                <li><a href="#neptune" class="navLink" aria-label="Neptune">Neptune</a></li>
+                <li><a href="#uranus" class="navLink" aria-label="Uranus">Uranus</a></li>
+                <li><a href="#saturn" class="navLink" aria-label="Saturn">Saturn</a></li>
+                <li><a href="#jupiter" class="navLink" aria-label="Jupiter">Jupiter</a></li>
+                <li><a href="#mars" class="navLink" aria-label="Mars">Mars</a></li>
+                <li><a href="#earth" class="navLink" aria-label="Earth">Earth</a></li>
             </ul>
-            <a href="javascript:void(0);" class="icon" onclick="mobileDropdown()">
+            <a href="javascript:void(0);" class="icon" onclick="mobileDropdown()" aria-label="Expand navigation menu">
                 <i class="fa fa-bars"></i>
             </a>
-            <!-- <h3>Titel</h3>
-            <ul>
-                <li>
-                    <a href="#">Link 1</a>
-                </li>
-                <li>
-                    <a href="#">Link 2</a>
-                </li>
-                <li>
-                    <a href="#">Link 3</a>
-                </li>
-            </ul> -->
         </nav>
     </header>
-    <main>
+    <main id="main-index">
         <article id="space">
 
             <div id="asteroid-belt">
-                <h3>Journey back to earth</h3>
+                <h1>Journey back to earth</h1>
             </div>
 
-            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-regular fa-circle-up"></i></button>
+            <button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Return to top">
+            <i class="fa-regular fa-circle-up"></i></button>
             <a id="neptune"></a>
             <section>
-                <img src="images/neptune.png">
+                <a href="destinations/neptune.html" class="planet" aria-label="Neptune page">
+                <img src="images/neptune.png" alt="Image of neptune" aria-label="Image of neptune">
+                </a>
                 <div class="planet-info">
                     <h2>Neptune</h2>
                     <p>
-                        Neptune is the eighth and farthest known planet from the Sun in our solar system. It's often referred to as an "ice giant" because it's primarily composed of icy and gaseous materials. 
+                        Neptune is the eighth and farthest known planet from the Sun in our solar system. It's often
+                        referred to as an "ice giant" because it's primarily composed of icy and gaseous materials.
                     </p>
                 </div>
             </section>
             <a id="uranus"></a>
             <section>
-                <img src="images/uranus.png">
+                <img src="images/uranus.png" alt="Image of uranus" aria-label="Image of uranus">
                 <div class="planet-info">
                     <h2>Uranus</h2>
                     <p>
-                        Uranus is the seventh planet from the Sun in our solar system. It's known for its distinct bluish-green color and is often referred to as an "ice giant." Uranus has a unique feature in that it rotates on its side, with its poles nearly in line with its orbital plane.
+                        Uranus is the seventh planet from the Sun in our solar system. It's known for its distinct
+                        bluish-green color and is often referred to as an "ice giant." Uranus has a unique feature in
+                        that it rotates on its side, with its poles nearly in line with its orbital plane.
                     </p>
                 </div>
             </section>
             <a id="saturn"></a>
             <section>
-                <img src="images/saturn.png">
+                <img src="images/saturn.png" alt="Image of saturn" aria-label="Image of saturn">
                 <div class="planet-info">
                     <h2>Saturn</h2>
                     <p>
-                        Saturn, the sixth planet from the Sun, is known for its stunning and iconic ring system. It's a gas giant, primarily composed of hydrogen and helium. Saturn has at least 83 confirmed moons, with Titan being the largest and notable for its thick atmosphere and liquid methane lakes. 
-                    </p>               
+                        Saturn, the sixth planet from the Sun, is known for its stunning and iconic ring system. It's a
+                        gas giant, primarily composed of hydrogen and helium. Saturn has at least 83 confirmed moons,
+                        with Titan being the largest and notable for its thick atmosphere and liquid methane lakes.
+                    </p>
                 </div>
-            </section >
+            </section>
             <a id="jupiter"></a>
             <section>
-                <img src="images/jupiter.png">
+                <img src="images/jupiter.png" alt="Image of jupiter" aria-label="Image of jupiter">
                 <div class="planet-info">
                     <h2>Jupiter</h2>
                     <p>
-                        Jupiter, the largest planet in our solar system, is a gas giant characterized by its prominent bands of clouds and the Great Red Spot, a massive storm. It has at least 79 known moons, including Ganymede, the largest moon in the solar system. Jupiter's immense size and strong magnetic field make it a key player in our solar system's dynamics. 
-                    </p>               
+                        Jupiter, the largest planet in our solar system, is a gas giant characterized by its prominent
+                        bands of clouds and the Great Red Spot, a massive storm. It has at least 79 known moons,
+                        including Ganymede, the largest moon in the solar system. Jupiter's immense size and strong
+                        magnetic field make it a key player in our solar system's dynamics.
+                    </p>
                 </div>
             </section>
             <a id="mars"></a>
             <section>
-                <img src="images/mars.png">
+                <img src="images/mars.png" alt="Image of mars" aria-label="Image of mars">
                 <div class="planet-info">
                     <h2>Mars</h2>
                     <p>
-                        Mars, often called the "Red Planet" due to its reddish appearance, is the fourth planet from the Sun in our solar system. It's a terrestrial planet with a thin atmosphere, and its surface features include canyons, volcanoes, and dry river valleys, suggesting a dynamic geological history. 
-                    </p>               
+                        Mars, often called the "Red Planet" due to its reddish appearance, is the fourth planet from the
+                        Sun in our solar system. It's a terrestrial planet with a thin atmosphere, and its surface
+                        features include canyons, volcanoes, and dry river valleys, suggesting a dynamic geological
+                        history.
+                    </p>
                 </div>
             </section>
             <a id="earth"></a>
             <section>
-                <img src="images/earth.png">
+                <img src="images/earth.png" alt="Image of earth" aria-label="Image of earth">
                 <div class="planet-info">
                     <h2>Earth</h2>
                     <p>
-                        Earth is the third planet from the Sun in our solar system and the only known celestial body to support life. It's often referred to as the "Blue Planet" because of its vast oceans. Earth has a diverse and complex ecosystem, with a wide range of climates and environments. Home.
-                    </p>               
+                        Earth is the third planet from the Sun in our solar system and the only known celestial body to
+                        support life. It's often referred to as the "Blue Planet" because of its vast oceans. Earth has
+                        a diverse and complex ecosystem, with a wide range of climates and environments. Home.
+                    </p>
                 </div>
             </section>
         </article>
@@ -112,36 +121,36 @@
     <footer>
         <p>Kilian Boute 2023</p>
     </footer>
-    
+
 </body>
 
 <script>
-   
+
     let mybutton = document.getElementById("myBtn");
-    
-    window.onscroll = function() {scrollFunction()};
-    
+
+    window.onscroll = function () { scrollFunction() };
+
     function scrollFunction() {
-      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
     }
-    
+
     function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     function mobileDropdown() {
-    var x = document.getElementById("links");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
+        var x = document.getElementById("links");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
-}
-    </script>
+</script>
 
 </html>
