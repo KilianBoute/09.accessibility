@@ -1,13 +1,23 @@
 body {
   background-color: black;
 }
+body main {
+  text-align: center;
+}
 body main article {
   margin-top: 3rem;
   width: 100%;
   text-align: center;
 }
+body main article img {
+  width: 100%;
+}
 body main article .info {
   margin: 1rem;
+}
+body main .back-button {
+  font-size: 40px;
+  color: white;
 }
 body footer {
   background-color: black;

@@ -3,15 +3,26 @@ body{
 
     main{
         
+        text-align: center;
 
         article{
             margin-top: 3rem;
             width: 100%;
             text-align: center;
 
+            img{
+                width: 100%;
+            }
+
            .info{
             margin: 1rem;
            } 
+
+        }
+
+        .back-button{
+            font-size: 40px;
+            color: white;
         }
     }
 

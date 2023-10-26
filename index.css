@@ -64,9 +64,6 @@ body main article section {
   align-items: center;
   margin-bottom: 3rem;
 }
-body main article section .planet {
-  width: 100%;
-}
 body main article section .planet-info {
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
