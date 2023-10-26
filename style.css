@@ -75,7 +75,6 @@ body footer {
   }
   body nav #links {
     display: flex !important;
-    text-align: right;
     margin: 1rem;
     order: 1;
   }
