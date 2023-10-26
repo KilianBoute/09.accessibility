@@ -103,11 +103,11 @@ body::after {
 }
 @media screen and (min-width: 800px) {
   body main #asteroid-belt {
-    height: 400px;
     background-image: url("images/asteroids.png");
-    background-size: 100%;
     background-position: 50%;
     background-repeat: repeat-x;
+    width: 2080px;
+    height: 520px;
   }
   body main article section {
     padding: 5%;

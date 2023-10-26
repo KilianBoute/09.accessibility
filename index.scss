@@ -24,8 +24,6 @@ main {
         background-repeat: repeat-x;
         animation: scrollBackground 30s linear infinite;
        
-
-    
     }
 
     h1 {
@@ -147,13 +145,13 @@ main {
         main {
             #asteroid-belt {
 
-                height: 400px;
 
                 background-image: url('images/asteroids.png');
 
-                background-size: 100%;
                 background-position: 50%;
                 background-repeat: repeat-x;
+                width: 2080px;
+                height: 520px;
 
             }
 
