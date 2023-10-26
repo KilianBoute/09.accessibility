@@ -10,7 +10,7 @@ body main #asteroid-belt {
   justify-content: center;
   align-items: center;
   background-image: url("images/asteroids.png");
-  width: 1040px;
+  width: 2080px;
   height: 260px;
   background-position: 50%;
   background-repeat: repeat-x;
@@ -106,7 +106,7 @@ body::after {
     background-image: url("images/asteroids.png");
     background-position: 50%;
     background-repeat: repeat-x;
-    width: 1040px;
+    width: 2080px;
     height: 520px;
   }
   body main article section {
@@ -127,6 +127,6 @@ body::after {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%); /* Negative half the width of .background */
+    transform: translateX(-25%);
   }
 }/*# sourceMappingURL=index.css.map */
