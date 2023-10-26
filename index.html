@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <script src="https://kit.fontawesome.com/bd0e2c5b6f.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <!-- <link rel="stylesheet" type="text/css" href="background.css" />  -->
+    <script type = "text/javascript" src="functions.js"></script>
    
 
 </head>
@@ -40,7 +42,7 @@
             </div>
 
             <button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Return to top">
-            <i class="fa-regular fa-circle-up"></i></button>
+                <i class="fa-solid fa-chevron-up"></i></button>
             <a id="neptune"></a>
             <section>
                 <div class="planet">
@@ -147,32 +149,21 @@
 </body>
 
 <script>
+        window.onscroll = function () { scrollFunction() };
 
+function scrollFunction() {
     let mybutton = document.getElementById("myBtn");
-
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
     }
+}
 
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
-    function mobileDropdown() {
-        var x = document.getElementById("links");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 </script>
 
 </html>
