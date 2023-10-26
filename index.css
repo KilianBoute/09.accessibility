@@ -106,7 +106,7 @@ body::after {
     background-image: url("images/asteroids.png");
     background-position: 50%;
     background-repeat: repeat-x;
-    width: 2080px;
+    width: 1040px;
     height: 520px;
   }
   body main article section {
@@ -116,7 +116,7 @@ body::after {
     justify-content: space-between;
   }
   body main article section .planet {
-    max-width: 40%;
+    width: 40%;
   }
   body main article section .planet-info {
     width: 40%;
